@@ -1,0 +1,49 @@
+.grid {
+  display: grid;
+  grid-template-rows: repeat(8, 40px);
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-areas:
+    "left-top right-top"
+    "left-top right-top"
+    "left-top right-middle"
+    "left-bottom right-middle"
+    "left-bottom right-bottom"
+    "left-bottom right-bottom"
+    "bottom bottom"
+    "bottom bottom";
+}
+.cell {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  border: 5px solid var(--mantine-primary-color-filled);
+}
+.active {
+  background-color: lighten(var(--mantine-primary-color-filled), 0.5);
+}
+.leftTop {
+  grid-area: left-top;
+}
+.leftBottom {
+  grid-area: left-bottom;
+  border-top: none;
+}
+.rightTop {
+  grid-area: right-top;
+  border-left: none;
+}
+.rightMiddle {
+  grid-area: right-middle;
+  border-left: none;
+  border-top: none;
+}
+.rightBottom {
+  grid-area: right-bottom;
+  border-left: none;
+  border-top: none;
+}
+.bottom {
+  grid-area: bottom;
+  border-top: none;
+}

@@ -1,0 +1,53 @@
+.root {
+  padding-top: 80;
+  padding-bottom: 80;
+}
+
+.inner {
+  position: "relative";
+}
+
+.image {
+  position: "absolute";
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 0;
+  opacity: 0.75;
+}
+
+.content {
+  padding-top: 220;
+  position: "relative";
+  z-index: 1;
+
+  @media screen and (max-width: var(--mantine-breakpoint-sm)) {
+    padding-top: 120px;
+  }
+
+  /* [theme.fn.smallerThan("sm")] {
+    paddingtop: 120;
+  } */
+}
+
+.title {
+  font-family: "Greycliff CF", var(--mantine-font-family);
+  text-align: center;
+  font-weight: 900;
+  font-size: 38;
+
+  @media screen and (max-width: var(--mantine-breakpoint-sm)) {
+    font-size: 32;
+  }
+
+  /* [theme.fn.smallerThan("sm")] {
+    fontsize: 32;
+  } */
+}
+
+.description {
+  max-width: 540;
+  margin: "auto";
+  margin-top: var(--mantine-spacing-xl);
+  margin-bottom: calc(var(--mantine-spacing-xl) * 1.5);
+}

@@ -1,0 +1,49 @@
+.navbar {
+  background-color: var(--mantine-primary-color-filled);
+}
+
+.header {
+  padding-bottom: var(--mantine-spacing-md);
+  margin-bottom: calc(var(--mantine-spacing-md) * 1.5);
+  border-bottom: 1px solid lighten(var(--mantine-primary-color-filled), 0.1);
+}
+
+.footer {
+  padding-top: var(--mantine-spacing-md);
+  margin-top: var(--mantine-spacing-md);
+  border-top: 1px solid lighten(var(--mantine-primary-color-filled), 0.1);
+}
+
+.link {
+  /* ...theme.fn.focusStyles(); */
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  font-size: var(--mantine-font-size-sm);
+  color: var(--mantine-color-white);
+  padding: var(--mantine-spacing-xs) var(--mantine-spacing-sm);
+  border-radius: var(--mantine-radius-sm);
+  font-weight: 500;
+  width: 100%;
+
+  @mixin hover {
+    background-color: lighten(var(--mantine-primary-color-filled), 0.1);
+  }
+}
+
+.linkIcon {
+  /* ref: icon; */
+  color: var(--mantine-color-white);
+  opacity: 0.75;
+  margin-right: var(--mantine-spacing-sm);
+}
+
+.linkActive {
+  &,
+  &:hover {
+    background-color: lighten(var(--mantine-primary-color-filled), 0.1);
+    svg {
+      opacity: 0.9;
+    }
+  }
+}

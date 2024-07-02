@@ -1,0 +1,84 @@
+.wrapper {
+  display: grid;
+  width: 100%;
+  height: 100%;
+  grid-template-areas:
+    "card1 card1 card2 card2 card3 card3 card4 card4"
+    "chart chart chart chart chart table table table";
+  grid-template-columns: repeat(8, 1fr);
+  gap: 15px;
+
+  @media screen and (max-width: $mantine-breakpoint-md) {
+    grid-template-areas:
+      "card1 table"
+      "card2 table"
+      "card3 table"
+      "card4 table"
+      "chart table";
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media screen and (max-width: $mantine-breakpoint-sm) {
+    display: flex;
+    flex-direction: column;
+  }
+}
+.icon {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 15px;
+  border-radius: 5px;
+}
+.card1 {
+  svg {
+    color: hsl(199, 100%, 49%);
+  }
+  span:first-of-type {
+    background-color: hsla(199, 100%, 49%, 15%);
+  }
+  grid-area: card1;
+  display: flex;
+  flex-direction: row;
+}
+.card2 {
+  svg {
+    color: hsl(173, 100%, 30%);
+  }
+  span:first-of-type {
+    background-color: hsla(173, 100%, 30%, 15%);
+  }
+  grid-area: card2;
+  display: flex;
+  flex-direction: row;
+}
+.card3 {
+  svg {
+    color: hsl(296, 95%, 37%);
+  }
+  span:first-of-type {
+    background-color: hsla(296, 95%, 37%, 15%);
+  }
+  grid-area: card3;
+  display: flex;
+  flex-direction: row;
+}
+.card4 {
+  svg {
+    color: hsl(35, 100%, 50%);
+  }
+  span:first-of-type {
+    background-color: hsla(35, 100%, 50%, 15%);
+  }
+  grid-area: card4;
+  display: flex;
+  flex-direction: row;
+}
+.chart {
+  grid-area: chart;
+}
+.table {
+  grid-area: table;
+}

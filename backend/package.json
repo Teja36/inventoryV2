@@ -1,0 +1,38 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "backend for inventory app",
+  "main": "dist/index.js",
+  "type": "module",
+  "scripts": {
+    "build": "npx tsc",
+    "start": "node --env-file=.env dist/src/index.js",
+    "dev": "npx tsc --watch & node --watch --env-file=.env dist/src/index.js",
+    "db:generate": "npx drizzle-kit generate",
+    "db:migrate": "node --env-file=.env dist/src/db/migrate.js",
+    "db:seed": "node --env-file=.env dist/src/db/seed.js",
+    "db:studio": "npx drizzle-kit studio"
+  },
+  "author": "teja36",
+  "license": "ISC",
+  "dependencies": {
+    "@lucia-auth/adapter-drizzle": "^1.0.7",
+    "@node-rs/argon2": "^1.8.3",
+    "cors": "^2.8.5",
+    "drizzle-orm": "^0.31.2",
+    "express": "^4.19.2",
+    "lucia": "^3.2.0",
+    "multer": "^1.4.5-lts.1",
+    "pg": "^8.12.0",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.17",
+    "@types/express": "^4.17.21",
+    "@types/multer": "^1.4.11",
+    "@types/node": "^20.14.2",
+    "@types/pg": "^8.11.6",
+    "drizzle-kit": "^0.22.7",
+    "typescript": "^5.4.5"
+  }
+}
